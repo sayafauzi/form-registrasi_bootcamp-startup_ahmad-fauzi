@@ -43,11 +43,27 @@ export const RegistrationForm = () => {
 
   return (
     <div className="relative">
-      {/* Banner Sukses (Melayang/Absolute Style untuk kesan modern) */}
+      {/* Banner bila Sukses */}
       {isSubmitted && (
-        <div className="absolute -top-4 left-0 right-0 z-10 mb-6 p-4 bg-emerald-500 rounded-xl shadow-lg flex items-center gap-3 text-white animate-fade-in-down">
-          <CheckCircle2 className="w-6 h-6 text-emerald-100" />
-          <p className="font-medium">Registrasi Berhasil diamankan, {submittedName}! 🎉</p>
+        <div className="mb-8 relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-400 to-teal-500 p-[2px] shadow-lg shadow-emerald-500/20 animate-fade-in-down transition-all duration-500">
+          <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 flex items-start gap-4">
+            
+            {/* Ikon dengan latar belakang melingkar */}
+            <div className="bg-emerald-100 rounded-full p-2.5 flex-shrink-0 mt-0.5 shadow-sm">
+              <CheckCircle2 className="w-6 h-6 text-emerald-600" />
+            </div>
+            
+            {/* Teks Konten */}
+            <div className="flex-1">
+              <h3 className="text-emerald-900 font-extrabold text-base tracking-tight mb-1">
+                Registrasi Berhasil! 🎉
+              </h3>
+              <p className="text-emerald-700 text-sm font-medium leading-snug">
+                Kursi untuk <span className="font-bold">{submittedName}</span> telah diamankan ke dalam sistem.
+              </p>
+            </div>
+            
+          </div>
         </div>
       )}
 
