@@ -140,7 +140,7 @@ export const RegistrationForm = () => {
         <FormInput 
           label="Situs Web Portfolio" 
           type="url"
-          placeholder="https://github.com/..."
+          placeholder="https://github.com/...."
           optional={true}
           registration={register("websiteUrl", { 
             pattern: { value: /^https?:\/\/[^\s$.?#].[^\s]*$/, message: "Format URL tidak valid" }
